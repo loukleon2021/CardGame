@@ -1,0 +1,72 @@
+Ranks of Playing Cards
+
+    1. Straight Flush
+        All Same suit
+        5 cards
+            in order
+        ties determined by High Card
+        #should we care about Aces High?
+        #can tie
+        
+    2. Four of a Kind
+        4 Cards
+            All Same rank
+        ties determined by quad 
+            then by fifth card
+        
+        
+    3. Full House
+        3 Cards
+            All Same rank
+        & 2 Cards
+            All Same rank
+        ties determined by triplet
+            then by pair
+        #can Tie
+        
+    4. Flush
+        5 Cards
+            All Same suit
+        #order doesn't matter
+        ties determined by High Card 
+            then next card 
+                then...
+        #can Tie
+        
+    5. Straight
+        5 Cards
+            in Order
+        Tie determined by high card
+        #can Tie
+        
+    6. Three of a kind
+        3 cards
+            same rank
+        Ties determined by triplet
+            Then by next high card
+                Then next card
+                
+    7. Two Pair
+        2 cards
+            same rank
+        & 2 more cards
+            same rank
+        ties determined by high pair
+            then low pair
+                then kicker
+        #can tie
+        
+    8. One Pair
+        2 Cards
+            Same rank
+        ties determined by Pair
+            then next card
+                then next....
+        #can tie
+        
+    9. High Card
+        ties determined by High
+            then next
+                then next.....
+        #can tie
+         
