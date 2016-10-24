@@ -87,7 +87,7 @@ void Hand :: sortHand()
 
 int Hand :: Pair()
 {
-	if(cardOne == cardTwo || cardOne == cardThree || cardOne == cardFour || cardOne == cardFive)
+	if(cardOne == cardTwo  || cardOne == cardThree  || cardOne == cardFour || cardOne == cardFive)
 	{
 		return cardOne.getFace();
 	}
@@ -301,7 +301,26 @@ bool Hand :: straight() //not finished
 bool Hand :: hasPair()
 {
 	int x = Pair();
-	if(x != 0)
+	int y = threeOfAKind();
+	int z = fourOfAKind();
+	card testTwoPair();
+	if(x != 0 && y == 0 && z == 0 && testTwoPair.face() == 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool Hand :: hasTwoPair()
+{
+	int x = Pair();
+	int y = threeOfAKind();
+	int z = fourOfAKind();
+	card testTwoPair();
+	if(x != 0 && y == 0 && z == 0 && testTwoPair.face() != 0)
 	{
 		return true;
 	}
