@@ -17,9 +17,9 @@ class Hand
 		int threeOfAKind();
 		int fourOfAKind();
 		bool hasPair();
-		bool hastwoPair();
-		bool hasthreeOfAKind();
-		bool hasfourOfAKind();
+		bool hasTwoPair();
+		bool hasThreeOfAKind();
+		bool hasFourOfAKind();
 		bool flush();
 		bool straight();
 	private:
@@ -43,6 +43,7 @@ void Hand :: setHand(Card c1, Card c2, Card c3, Card c4,Card c5)
 	cardThree = c3;
 	cardFour = c4;
 	cardFive = c5;
+	sortHand();
 }
 
 
@@ -303,8 +304,8 @@ bool Hand :: hasPair()
 	int x = Pair();
 	int y = threeOfAKind();
 	int z = fourOfAKind();
-	card testTwoPair();
-	if(x != 0 && y == 0 && z == 0 && testTwoPair.face() == 0)
+	Card testTwoPair = twoPair();
+	if(x != 0 && y == 0 && z == 0 && testTwoPair.getFace() == 0)
 	{
 		return true;
 	}
@@ -319,8 +320,40 @@ bool Hand :: hasTwoPair()
 	int x = Pair();
 	int y = threeOfAKind();
 	int z = fourOfAKind();
-	card testTwoPair();
-	if(x != 0 && y == 0 && z == 0 && testTwoPair.face() != 0)
+	Card testTwoPair = twoPair();
+	if(x != 0 && y == 0 && z == 0 && testTwoPair.getFace() != 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool Hand :: hasThreeOfAKind()
+{
+	int x = Pair();
+	int y = threeOfAKind();
+	int z = fourOfAKind();
+	Card testTwoPair = twoPair();
+	if(x != 0 && y != 0 && z == 0 && testTwoPair.getFace() == 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool Hand :: hasFourOfAKind()
+{
+	int x = Pair();
+	int y = threeOfAKind();
+	int z = fourOfAKind();
+	Card testTwoPair = twoPair();
+	if(x != 0 && y != 0 && z != 0 && testTwoPair.getFace() == 0)
 	{
 		return true;
 	}
