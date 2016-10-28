@@ -14,6 +14,7 @@ class Card
 		static string faceArray[14];        //string array for all 13 faces of cards. Will explain the +1 below
 		static string suitArray[5];         //string array for all 5 suits of cards. Will explain the +1 below
 		void toString();                   //basic function to print the current card
+		string printFace();
 		friend ostream & operator << (ostream & fn, const Card & d);
 		bool operator > (const Card & g) const;
 		bool operator < (const Card & g) const;
@@ -56,7 +57,10 @@ void Card::toString()
 }
 
 
-
+string Card :: printFace()
+{
+	return faceArray[face];
+}
 
 
 ostream & operator << (ostream & fn, const Card & d)
