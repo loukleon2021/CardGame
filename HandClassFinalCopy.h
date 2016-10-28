@@ -195,6 +195,18 @@ int Hand :: fourOfAKind()
 	{
 		return cardTwo.getFace();
 	}
+	else if(cardOne == cardTwo && cardTwo == cardThree && cardThree == cardFive && cardFive != cardFour)
+	{
+		return cardOne.getFace();
+	}
+	else if(cardOne == cardThree && cardThree == cardFour && cardFour == cardFive && cardFive != cardTwo)
+	{
+		return cardOne.getFace();
+	}
+	else if(cardOne == cardTwo && cardTwo == cardFour && cardFour == cardFive && cardFive != cardThree)
+	{
+		return cardOne.getFace();
+	}
 	else
 	{
 		return 0;
@@ -442,12 +454,12 @@ void Hand :: compareHand(Hand & g)
 			if(P1P == 1 && P2P != 1 || P1P > P2P)
 			{
 				winner.setCard(P1P,0);
-				cout << "Player One Wins with " << winner.printFace() << endl; 
+				cout << "Player One Wins with a pair of " << winner.printFace() <<"'s"<< endl; 
 			}
 			else if(P2P == 1 && P1P != 1 || P1P < P2P)
 			{
 				winner.setCard(P2P,0);
-				cout << "Player One Wins with " << winner.printFace() << endl; 
+				cout << "Player Two Wins with a pair of " << winner.printFace() <<"'s"<< endl; 
 			}
 			else
 			{
